@@ -49,7 +49,6 @@ namespace Platformer.Mechanics
         {
             if (collected) return;
             //disable the gameObject and remove it from the controller update list.
-            ScoreManager.instance.AddPoint();
             frame = 0;
             sprites = collectedAnimation;
             if (controller != null)
@@ -58,6 +57,7 @@ namespace Platformer.Mechanics
             var ev = Schedule<PlayerTokenCollision>();
             ev.token = this;
             ev.player = player;
+            ScoreManager.Instance.AddPoint();
         }
     }
 }

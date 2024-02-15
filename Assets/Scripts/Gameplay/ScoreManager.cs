@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+namespace Platformer.Gameplay{
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager instance;
+    public static ScoreManager Instance { get; private set; }
+
     public Text scoreText;
     public Text highscoreText;
     int score=0;
     int highscore=0;
     private void Awake(){
-        instance=this;
-        
+        Instance=this;
     }
     // Start is called before the first frame update
     void Start()
@@ -29,4 +29,5 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
     }
+}
 }
