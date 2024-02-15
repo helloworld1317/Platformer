@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - TutorialRequirement
+  - GM
   layers:
   - Default
   - TransparentFX
